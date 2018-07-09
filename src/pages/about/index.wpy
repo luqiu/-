@@ -1,0 +1,36 @@
+<style lang="less">
+</style>
+
+<template>
+  <view class="topinfo">
+  
+  </view>
+</template>
+
+<script>
+  import wepy from 'wepy'
+
+  export default class About extends wepy.page {
+    config = {
+      navigationBarTitleText: '小兵装饰',
+      navigationBarBackgroundColor:'#ff7f36',
+      navigationBarTextStyle:'white'
+    }
+    components = {
+      
+    }
+    data = {
+    }
+    methods = {
+      
+    }
+
+    events = {
+      
+    }
+
+    onLoad() {
+      
+    }
+  }
+</script>

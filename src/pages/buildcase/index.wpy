@@ -1,0 +1,46 @@
+<style lang="less">
+
+</style>
+<template>
+<view>scan</view>
+</template>
+<script>
+import wepy from 'wepy'
+
+export default class Buildcase extends wepy.page {
+  config = {
+    navigationBarTitleText: '扫一扫'
+  }
+  components = {
+
+  }
+  data = {
+
+  }
+  methods = {
+    // 存放响应wxml中所捕获到的事件的函数，如bindtap、bindchange
+  }
+  events = {
+    // WePY组件事件处理函数对象，存放响应组件之间通过$broadcast、$emit、$invoke所传递的事件的函数
+  }
+  onReady() {
+    // wx.scanCode({
+    //   onlyFromCamera: true,
+    //   success: function(res){
+    //     console.log(1);
+    //     console.log(res)
+    //   },
+    //   fail: function(res){
+    //     console.log(2);
+    //     console.log(res)
+    //   },
+    //   complete: function(res){
+    //     console.log(3);
+    //     console.log(res)
+    //   }
+    // })
+
+  }
+  // Other properties
+}
+</script>

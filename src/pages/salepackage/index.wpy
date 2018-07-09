@@ -1,0 +1,33 @@
+<style lang="less">
+</style>
+
+<template>
+</template>
+
+<script>
+  import wepy from 'wepy'
+
+  export default class Salepackage extends wepy.page {
+    config = {
+      navigationBarTitleText: '小兵装饰',
+      navigationBarBackgroundColor:'#ff7f36',
+      navigationBarTextStyle:'white'
+    }
+    components = {
+      
+    }
+    data = {
+    }
+    methods = {
+      
+    }
+
+    events = {
+      
+    }
+
+    onLoad() {
+      
+    }
+  }
+</script>

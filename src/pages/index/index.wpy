@@ -1,0 +1,140 @@
+<style lang="less">
+  .top{
+    height:210rpx;
+    background-color:#ff7f36;
+    padding-top:20rpx;
+    box-sizing:border-box;
+    .company{
+      width:710rpx;
+      height:281rpx;
+      background-color:#fff;
+      box-shadow:0 0 20px 0 rgba(0,0,0,.05);
+      border-radius:10rpx;
+      margin:0 auto;
+      box-sizing:border-box;
+      padding:0 20rpx;
+      padding-top:30rpx;
+      view.info{
+        border-bottom:1rpx solid #ececec;
+        height:160rpx;
+        position:relative;
+        image{
+          width:130rpx;
+          height:130rpx;
+          border-radius:50%;
+        }
+        .iconimg{
+          width:34rpx;
+          border-radius:0;
+          position:absolute;
+          top:0;
+          right:0rpx;
+        }
+        .name{
+          font-size:34rpx;
+          color:#010101;
+          position:absolute;
+          top:0;
+          left:151rpx;
+        }
+        .address{
+          font-size:26rpx;
+          color:#888888;
+          position:absolute;
+          top:60rpx;
+          left:151rpx;
+        }
+        .tel{
+          font-size:26rpx;
+          color:#ff7f36;
+          position:absolute;
+          bottom:30rpx;
+          left:151rpx;
+        }
+      }
+      view.fensi{
+        height:90rpx;
+        line-height:90rpx;
+        .imgbox{
+          float:left;
+          margin-top:16rpx;
+          margin-right:30rpx;
+          // height:54rpx;
+          image{
+            float:left;
+            width:50rpx;
+            height:50rpx;
+            border:2rpx solid #fff;
+            border-radius:50%;
+            margin-left:-10rpx;
+          }
+        }
+        .fensinum{
+          float:left;
+          font-size:26rpx;
+          color:#b2b2b2;
+        }
+        .iconfont{
+          margin-top:20rpx;
+          font-size:24rpx;
+          color:#888888;
+          float:right;
+          margin-right:80rpx;
+        }
+      }
+    }
+  }
+</style>
+
+<template>
+  <view class="top">
+    <view class="company">
+      <view class="info">
+        <image src="/images/index/logo.png" mode="widthFix"></image>
+        <text class="name">小兵装饰</text>
+        <text class="address">成都市天府新区复城国际T4-2908</text>
+        <text class="tel">400-8888-8888</text>
+        <image class="iconimg" src="/images/icon/k.png" mode="widthFix"></image>
+      </view>
+      <view class="fensi">
+        <view class="imgbox">
+          <image src="/images/index/logo.png" mode="widthFix"></image>
+          <image src="/images/index/logo.png" mode="widthFix"></image>
+          <image src="/images/index/logo.png" mode="widthFix"></image>
+        </view>
+        <view class="fensinum">
+        等 999 位粉丝围观
+        </view>
+        <i class="iconfont icon-jiantoushang"></i>
+      </view>
+    </view>
+  </view>
+</template>
+
+<script>
+  import wepy from 'wepy'
+
+  export default class Index extends wepy.page {
+    config = {
+      navigationBarTitleText: '小兵装饰',
+      navigationBarBackgroundColor:'#ff7f36',
+      navigationBarTextStyle:'white'
+    }
+    components = {
+      
+    }
+    data = {
+    }
+    methods = {
+      
+    }
+
+    events = {
+      
+    }
+
+    onLoad() {
+      
+    }
+  }
+</script>
