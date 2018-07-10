@@ -8,6 +8,9 @@
   justify-content: space-between;
   box-sizing: border-box;
 }
+page{
+  background-color:#f7f7f7;
+}
 </style>
 
 <script>
@@ -24,6 +27,7 @@ export default class extends wepy.app {
   config = {
     pages: [
       'pages/index/index',
+      'pages/index/showhomesmap',
       'pages/buildcase/index',
       'pages/salepackage/index',
       'pages/about/index'

@@ -5,14 +5,8 @@
     padding-top:20rpx;
     box-sizing:border-box;
     .company{
-      width:710rpx;
       height:281rpx;
-      background-color:#fff;
-      box-shadow:0 0 20px 0 rgba(0,0,0,.05);
-      border-radius:10rpx;
       margin:0 auto;
-      box-sizing:border-box;
-      padding:0 20rpx;
       padding-top:30rpx;
       view.info{
         border-bottom:1rpx solid #ececec;
@@ -68,6 +62,9 @@
             border-radius:50%;
             margin-left:-10rpx;
           }
+          image:nth-child(1){
+            margin-left:0rpx;
+          }
         }
         .fensinum{
           float:left;
@@ -75,20 +72,196 @@
           color:#b2b2b2;
         }
         .iconfont{
-          margin-top:20rpx;
+          margin-top:0rpx;
           font-size:24rpx;
-          color:#888888;
+          color:#ccc;
           float:right;
-          margin-right:80rpx;
+          margin-right:0rpx;
         }
       }
     }
   }
+  //公共样式，box
+  .contentbox{
+    width:710rpx;
+    background-color:#fff;
+    box-shadow:0 0 20px 0 rgba(0,0,0,.05);
+    border-radius:10rpx;
+    margin:0 auto;
+    box-sizing:border-box;
+    margin-top:20rpx;
+    padding:0 20rpx;
+  }
+  //公共样式，标题
+  .navtitle{
+    height:93rpx;
+    border-bottom:1rpx solid #ececec;
+    line-height:93rpx;
+    
+    .iconimg{
+      width:34rpx;
+      margin-top:34rpx;
+      margin-right:20rpx;
+      float:left;
+    }
+    .title{
+      font-size:34rpx;
+      color:#000;
+      float:left;
+    }
+    .more{
+      float:right;
+      font-size:26rpx;
+      color:#888;
+    }
+    .iconfont{
+      float:right;
+      font-size:26rpx;
+      color:#ccc;
+      margin-left:20rpx;
+    }
+  }
+  .server{
+    height:318rpx;
+    margin-top:110rpx;
+    .serverlist{
+      display:flex;
+      flex-wrap:nowrap;
+      justify-content:space-between;
+      align-items:center;
+      padding-left:20rpx;
+      padding-right:20rpx;
+      &>view{
+        image{
+          width:120rpx;
+          margin-top:30rpx;
+        }
+        view{
+          width:100%;
+          text-align:center;
+          color:#353535;
+          font-size:26rpx;
+          margin-bottom:30rpx;
+        }
+      }
+    }
+  }
+  .cases{
+    height:718rpx;
+    .swiperbox{
+      height:624rpx;
+      padding-top:30rpx;
+      box-sizing:border-box;
+      swiper{
+        height:100%;
+        width:100%;
+        image{
+          width:100%;
+          height:380rpx;
+        }
+        .title{
+          font-size:28rpx;
+          color:#000;
+          line-height:80rpx;
+        }
+        .info{
+          font-size:22rpx;
+          color:#888;
+          ine-height:36rpx;
+        }
+        // 修改swiper样式
+        .wx-swiper-dot{
+           width:20rpx;
+           height:20rpx;
+        }
+      }
+    }
+  }
+  .bannerbox{
+    width:100%;
+    margin-top:20rpx;
+    height:288rpx;
+    swiper{
+      width:100%;
+      height:100%;
+    }
+    swiper-item{
+      // border-radius:10rpx;
+      &>view{
+        height:100%;
+        margin:0 10rpx;
+        border-radius:10rpx;
+        box-shadow:0 0 20px 0 rgba(0,0,0,.05);
+        overflow:hidden;
+          image{
+            width:100%;
+            border-radius:10rpx;
+          }
+      }
+      .wx-swiper-dot{
+          width:20rpx;
+          height:20rpx;
+      }
+    }
+  }
+  .showhomeslist{
+    &>view{
+      height:135rpx;
+      border-bottom:1rpx solid #ececec;
+      position:relative;
+      .villagename{
+        font-size:28rpx;
+        position:absolute;
+        top:24rpx;
+        left:0;
+      }
+      .casenum{
+        font-size:28rpx;
+        color:#ff7f36;
+        position:absolute;
+        top:24rpx;
+        right:0;
+      }
+      .villageaddress{
+        font-size:22rpx;
+        position:absolute;
+        bottom:24rpx;
+        left:0;
+        color:#888;
+      }
+      .villagekm{
+        font-size:22rpx;
+        position:absolute;
+        bottom:24rpx;
+        right:0;
+        color:#b2b2b2;
+      }
+    }
+    &>view:last-child{
+      border:0rpx solid #fff;
+    }
+  }
+  .showhomesmap{
+    height:530rpx;
+    .map{
+      padding:30rpx 0;
+      map{
+        width:100%;
+        height:378rpx;
+      }
+    }
+  }
+  .reviewlist{
+    margin-bottom:40rpx;
+  }
 </style>
 
 <template>
+  <!--
+    头部公司信息
+  -->
   <view class="top">
-    <view class="company">
+    <view class="company contentbox">
       <view class="info">
         <image src="/images/index/logo.png" mode="widthFix"></image>
         <text class="name">小兵装饰</text>
@@ -109,6 +282,176 @@
       </view>
     </view>
   </view>
+  <!--
+    客户服务
+  -->
+  <view class="server contentbox">
+    <view class="navtitle">
+      <image class="iconimg" src="/images/icon/d.png" mode="widthFix"></image>
+      <view class="title">
+        客户服务
+      </view>
+    </view>
+    <view class="serverlist">
+      <view>
+        <image src="/images/index/server1.png" mode="widthFix"></image>
+        <view>装修报价</view>
+      </view>
+      <view>
+        <image src="/images/index/server2.png" mode="widthFix"></image>
+        <view>免费量房</view>
+      </view>
+      <view>
+        <image src="/images/index/server3.png" mode="widthFix"></image>
+        <view>免费咨询</view>
+      </view>
+      <view>
+        <image src="/images/index/server4.png" mode="widthFix"></image>
+        <view>售后服务</view>
+      </view>
+    </view>
+  </view>
+  <!--
+    精选案例
+  -->
+  <view class="cases contentbox">
+    <view class="navtitle">
+      <image class="iconimg" src="/images/icon/b.png" mode="widthFix"></image>
+      <view class="title">
+        精选案例
+      </view>
+      <i class="iconfont icon-jiantoushang"></i>
+      <view class="more"> 更多案例</view>
+    </view>
+    <view class="swiperbox">
+      <swiper indicator-dots="{{indicatorDots}}" indicator-color="#e3e3e3" indicator-active-color="#ff7f36"
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{imgUrls}}" wx:key="key1">
+          <swiper-item>
+            <image src="{{item}}" mode="aspectFill"/>
+            <view class="caseinfo">
+              <view class="title">
+              天府新区华阳南阳盛世140m2欧式豪华装修案例
+              </view>
+              <view class="info">
+              微信内字体的使用与所运行的系统字体保持一致，常用字号为20, 18, 17, 16,14 13, 11(pt)...
+              </view>
+            </view>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+  </view>
+  <!--
+    轮播banner
+  -->
+  <view class="bannerbox">
+    <swiper indicator-dots="true" circular="true" previous-margin="40rpx" next-margin="40rpx"
+      indicator-active-color="#ff7f36" autoplay="true"
+      >
+      <block wx:for="{{imgUrls}}" wx:key="key2">
+        <swiper-item>
+          <view>
+            <image src="{{item}}" mode="widthFix"/>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <!--
+    附近工地
+  -->
+  <view class="contentbox">
+    <view class="navtitle">
+      <image class="iconimg" src="/images/icon/a.png" mode="widthFix"></image>
+      <view class="title">
+        附近工地
+      </view>
+      <i class="iconfont icon-jiantoushang"></i>
+      <view class="more"> 更多工地</view>
+    </view>
+    <view class="showhomeslist">
+      <view>
+        <text class="villagename">恒大天府半岛</text>
+        <text class="casenum">3个工地</text>
+        <text class="villageaddress">天府大道南段188号（新世纪中国地产旁）</text>
+        <text class="villagekm">1.2km</text>
+      </view>
+      <view>
+        <text class="villagename">南湖社区一期</text>
+        <text class="casenum">1个工地</text>
+        <text class="villageaddress">天府大道南段188号</text>
+        <text class="villagekm">5.0km</text>
+      </view>
+      <view>
+        <text class="villagename">万科第五城</text>
+        <text class="casenum">26个工地</text>
+        <text class="villageaddress">天府大道南段188号</text>
+        <text class="villagekm">6.5km</text>
+      </view>
+    </view>
+    <view >
+    
+    </view>
+    <view>
+      
+    </view>
+  </view>
+  <!--
+    工地参观
+  -->
+  <view class="showhomesmap contentbox" bindtap="opennewpage" data-pagename="showhomesmap">
+    <view class="navtitle">
+      <image class="iconimg" src="/images/icon/c.png" mode="widthFix"></image>
+      <view class="title">
+        工地参观
+      </view>
+      <i class="iconfont icon-jiantoushang"></i>
+      <view class="more"> 全屏查看</view>
+    </view>
+    <view class="map">
+      <map id="map" 
+      longitude="{{lon}}" latitude="{{lat}}" 
+      scale="14" show-location
+      bindcontroltap="controltap" markers="{{markers}}">
+      </map>
+    </view>
+  </view>
+  <!--
+    业主评价
+  -->
+  <view class="contentbox">
+    <view class="navtitle">
+      <image class="iconimg" src="/images/icon/e.png" mode="widthFix"></image>
+      <view class="title">
+        业主评价
+      </view>
+    </view>
+    <view class="reviewlist">
+      <view>
+        <view class="userinfo">
+          <image class="headimg" src="/images/icon/e.png" mode="widthFix"></image>
+          <view class="name">尼古拉斯赵四</view>
+          <view class="starbox">
+            <i class="iconfont icon-star-1"></i>
+            <i class="iconfont icon-star-1"></i>
+            <i class="iconfont icon-star-1"></i>
+            <i class="iconfont icon-star-1"></i>
+            <i class="iconfont icon-star-1"></i>
+          </view>
+          <view class="projectname">
+          项目名称：恒大天府半岛一期北欧风格装修
+          </view>
+        </view>
+        <view class="reviewcontent">
+        土巴兔由深圳市彬讯科技有限公司创办，总部位于深圳市南山区科技园。自2008年创办以来，土巴兔始终秉承“用户价值第一”的经营理念，并处于高速而稳健的发展态势。截止目前，土巴兔已开通250个城市分站，汇聚全国近8万家正规装修公司、85万名室内设计师，已成立北京、上海、广州、武汉、长沙、南京、杭州、厦门、福州等27家分公司，当前拥有员工超过3000人。
+        </view>
+        <view class="reviewtime">
+        2018年6月29日 16:56
+        </view>
+      </view>
+    </view>
+  </view>
 </template>
 
 <script>
@@ -124,9 +467,43 @@
       
     }
     data = {
+      imgUrls: [
+        '/images/index/swiper1.png',
+        '/images/index/swiper2.png',
+        '/images/index/swiper3.png'
+      ],
+      indicatorDots: true,
+      autoplay: true,
+      interval: 5000,
+      duration: 1000,
+      lon:'',
+      lat:'',
+      markers: [{
+        iconPath: "/images/index/sanjiao1.png",
+        id: 0,
+        latitude: 30.55302,
+        longitude: 104.0541,
+        callout:{
+          content:'恒大天府半岛',
+          color:'#ff7f36',
+          fontSize:11,
+          borderRadius:5,
+          bgColor:'#fff',
+          padding:5,
+          display:'ALWAYS',
+          textAlign:'center'
+        },
+        height:10
+      }]
     }
     methods = {
-      
+      opennewpage(e) {
+        console.log(e)
+        var urlpath=e.currentTarget.dataset.pagename;
+        wx.navigateTo({
+          url: urlpath
+        })
+      }
     }
 
     events = {
@@ -134,7 +511,15 @@
     }
 
     onLoad() {
-      
+      var this_=this;
+      wx.getLocation({
+        type: 'wgs84',
+        success: function(res) {
+          console.log(res)
+          this_.lon=res.longitude;
+          this_.lat=res.latitude;
+        }
+      })
     }
   }
 </script>
