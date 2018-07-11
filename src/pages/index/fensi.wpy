@@ -1,0 +1,80 @@
+<style lang="less">
+.fensilist{
+  &>view{
+    height:110rpx;
+    line-height:110rpx;
+    border-bottom:1rpx solid #ececec;
+    .headimg{
+      width:74rpx;
+      height:74rpx;
+      border-radius:50%;
+      float:left;
+      margin-top:18rpx;
+    }
+    .name{
+      font-size:28rpx;
+      color:#353535;
+      line-height:110rpx;
+      float:left;
+      margin-left:20rpx;
+    }
+  }
+}
+</style>
+
+<template>
+  <view class="contentbox fensilist">
+    <view>
+      <image class="headimg" src="http://yihunyiche.oss-cn-beijing.aliyuncs.com/Aliyun/5b0e70b802c50.png" mode="widthFix"></image>
+      <view class="name">尼古拉斯赵四</view>
+    </view>
+    <view>
+      <image class="headimg" src="http://yihunyiche.oss-cn-beijing.aliyuncs.com/Aliyun/5b0e70b802c50.png" mode="widthFix"></image>
+      <view class="name">尼古拉斯赵四</view>
+    </view>
+    <view>
+      <image class="headimg" src="http://yihunyiche.oss-cn-beijing.aliyuncs.com/Aliyun/5b0e70b802c50.png" mode="widthFix"></image>
+      <view class="name">尼古拉斯赵四</view>
+    </view>
+    <view>
+      <image class="headimg" src="http://yihunyiche.oss-cn-beijing.aliyuncs.com/Aliyun/5b0e70b802c50.png" mode="widthFix"></image>
+      <view class="name">尼古拉斯赵四</view>
+    </view>
+    <view>
+      <image class="headimg" src="http://yihunyiche.oss-cn-beijing.aliyuncs.com/Aliyun/5b0e70b802c50.png" mode="widthFix"></image>
+      <view class="name">尼古拉斯赵四</view>
+    </view>
+    <view>
+      <image class="headimg" src="http://yihunyiche.oss-cn-beijing.aliyuncs.com/Aliyun/5b0e70b802c50.png" mode="widthFix"></image>
+      <view class="name">尼古拉斯赵四</view>
+    </view>
+  </view>
+</template>
+
+<script>
+  import wepy from 'wepy'
+
+  export default class Index extends wepy.page {
+    config = {
+      navigationBarTitleText: '粉丝围观',
+      navigationBarBackgroundColor:'#ff7f36',
+      navigationBarTextStyle:'white'
+    }
+    components = {
+      
+    }
+    data = {
+    }
+    methods = {
+      
+    }
+
+    events = {
+      
+    }
+
+    onLoad() {
+      
+    }
+  }
+</script>

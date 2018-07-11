@@ -1,5 +1,6 @@
 <style>
 @import './styles/icon';
+@import './styles/common';
 .container {
   height: 100%;
   display: flex;
@@ -26,7 +27,9 @@ setStore(store)
 export default class extends wepy.app {
   config = {
     pages: [
+      'pages/index/baojia',
       'pages/index/index',
+      'pages/index/fensi',
       'pages/index/showhomesmap',
       'pages/buildcase/index',
       'pages/salepackage/index',

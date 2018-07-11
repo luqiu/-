@@ -81,17 +81,7 @@
       }
     }
   }
-  //公共样式，box
-  .contentbox{
-    width:710rpx;
-    background-color:#fff;
-    box-shadow:0 0 20px 0 rgba(0,0,0,.05);
-    border-radius:10rpx;
-    margin:0 auto;
-    box-sizing:border-box;
-    margin-top:20rpx;
-    padding:0 20rpx;
-  }
+  
   //公共样式，标题
   .navtitle{
     height:93rpx;
@@ -252,7 +242,85 @@
     }
   }
   .reviewlist{
+    width:100%;
     margin-bottom:40rpx;
+    font-size:22rpx;
+    overflow:hidden;
+    &>view:last-child{
+      border-bottom:0rpx solid #ececec;
+    }
+    &>view{
+      border-bottom:1rpx solid #ececec;
+      .userinfo{
+        height:112rpx;
+        position:relative;
+        .headimg{
+          width:80rpx;
+          height:80rpx;
+          border-radius:50%;
+          position:absolute;
+          left:0;
+          bottom:0;
+        }
+        .name{
+          font-size:24rpx;
+          color:#000;
+          position:absolute;
+          left:100rpx;
+          bottom:54rpx;
+          letter-spacing:2px;
+        }
+        .projectname{
+          font-size:22rpx;
+          color:#888;
+          position:absolute;
+          left:100rpx;
+          bottom:0rpx;
+          background-color:#fff9f6;
+          width:550rpx;
+          height:40rpx;
+          line-height:40rpx;
+          padding-left:20rpx;
+          
+        }
+        .starbox{
+          color:#ff7f36;
+          position:absolute;
+          right:0rpx;
+          bottom:54rpx;
+          letter-spacing:2px;
+          .iconfont{
+            font-size:26rpx;
+          }
+        }
+      }
+      .reviewcontent{
+        font-size:22rpx;
+        color:#353535;
+        line-height:40rpx;
+        padding-left:100rpx;
+        margin-top:20rpx;
+      }
+      .reviewtime{
+        font-size:22rpx;
+        color:#b2b2b2;
+        line-height:40rpx;
+        padding-left:100rpx;
+        margin-top:25rpx;
+        margin-bottom:25rpx;
+      }
+    }
+  }
+  .floattel{
+    width:120rpx;
+    height:120rpx;
+    position:fixed;
+    bottom:40rpx;
+    right:20rpx;
+    image{
+      width:100%;
+      height:100%;
+    }
   }
 </style>
 
@@ -269,7 +337,7 @@
         <text class="tel">400-8888-8888</text>
         <image class="iconimg" src="/images/icon/k.png" mode="widthFix"></image>
       </view>
-      <view class="fensi">
+      <view class="fensi" bindtap="opennewpage" data-pagename="fensi">
         <view class="imgbox">
           <image src="/images/index/logo.png" mode="widthFix"></image>
           <image src="/images/index/logo.png" mode="widthFix"></image>
@@ -430,7 +498,7 @@
     <view class="reviewlist">
       <view>
         <view class="userinfo">
-          <image class="headimg" src="/images/icon/e.png" mode="widthFix"></image>
+          <image class="headimg" src="http://yihunyiche.oss-cn-beijing.aliyuncs.com/Aliyun/5b0e70b802c50.png" mode="widthFix"></image>
           <view class="name">尼古拉斯赵四</view>
           <view class="starbox">
             <i class="iconfont icon-star-1"></i>
@@ -450,7 +518,33 @@
         2018年6月29日 16:56
         </view>
       </view>
+      <view>
+        <view class="userinfo">
+          <image class="headimg" src="http://yihunyiche.oss-cn-beijing.aliyuncs.com/Aliyun/5b0e70b802c50.png" mode="widthFix"></image>
+          <view class="name">小鸡炖蘑菇</view>
+          <view class="starbox">
+            <i class="iconfont icon-star-1"></i>
+            <i class="iconfont icon-star-1"></i>
+            <i class="iconfont icon-star-1"></i>
+            <i class="iconfont icon-star-1"></i>
+            <i class="iconfont icon-star-1"></i>
+          </view>
+          <view class="projectname">
+          项目名称：万达1号欧式简约风格
+          </view>
+        </view>
+        <view class="reviewcontent">
+        土巴兔由深圳市彬讯科技有限公司创办。
+        </view>
+        <view class="reviewtime">
+        2018年6月29日 16:56
+        </view>
+      </view>
     </view>
+  </view>
+  <!--拨打电话-->
+  <view class="floattel">
+    <image src="/images/index/floattel.png" mode="acceptfix"></image>
   </view>
 </template>
 

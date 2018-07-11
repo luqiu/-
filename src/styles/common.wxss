@@ -1,0 +1,10 @@
+.contentbox{
+width:710rpx;
+background-color:#fff;
+box-shadow:0 0 20px 0 rgba(0,0,0,.05);
+border-radius:10rpx;
+margin:0 auto;
+box-sizing:border-box;
+margin-top:20rpx;
+padding:0 20rpx;
+}

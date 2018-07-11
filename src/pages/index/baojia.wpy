@@ -1,0 +1,141 @@
+<style lang="less">
+page{
+  background-color:#f7f7f7;
+}
+.baojiabg{
+  width:100%;
+  position:relative;
+  image{
+    width:100%;
+  }
+  &>view{
+    width:620rpx;
+    height:64rpx;
+    line-height:64rpx;
+    color:#fff;
+    text-align:center;
+    font-size:32rpx;
+    position:absolute;
+    top:296rpx;
+    left:64rpx;
+  }
+}
+.contentbox{
+  height:720rpx;
+  position:absolute;
+  top:372rpx;
+  left:20rpx;
+  padding:0rpx 30rpx;
+  padding-top:40rpx;
+  input{
+    width:650rpx;
+    height:88rpx;
+    border-radius:10rpx;
+    background-color:#f6f6f6;
+    padding-left:30rpx;
+    font-size:30rpx;
+    color:#353535;
+    margin-top:20rpx;
+  }
+  .picker{
+    width:650rpx;
+    height:88rpx;
+    line-height:88rpx;
+    border-radius:10rpx;
+    background-color:#f6f6f6;
+    padding-left:30rpx;
+    font-size:30rpx;
+    color:#353535;
+    margin-top:20rpx;
+    position:relative;
+  }
+  .picker:after{
+    font-family:'iconfont';
+    content:'\e621';
+    position:absolute;
+    color:#999;
+    top:0rpx;
+    right:20rpx;
+  }
+  .baomi{
+    font-size:22rpx;
+    color:#ff7f36;
+    text-align:center;
+    margin-top:20rpx;
+  }
+  .getprice{
+    width:650rpx;
+    height:88rpx;
+    line-height:88rpx;
+    text-align:center;
+    background-color:#ffc230;
+    border-radius:10rpx;
+    font-size:34rpx;
+    color:#fff;
+    margin-top:60rpx;
+  }
+}
+</style>
+
+<template>
+<view class="baojiabg">
+  <image src="/images/index/baojiabg.png" mode="widthFix"></image>
+  <view>
+  小兵装饰帮您算出装修合理的行情价
+  </view>
+</view>
+<view class="contentbox">
+  <input placeholder-style="color:#888;font-size:28rpx;" placeholder="输入您的姓名" />
+  <input placeholder-style="color:#888;font-size:28rpx;" placeholder="输入您的手机号码" />
+  <input placeholder-style="color:#888;font-size:28rpx;" placeholder="输入您的房屋面积" />
+   <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" bindchange="choosehuxing">
+    <view class="picker">
+      <block wx:if="{{index==''}}">
+        选择您的户型
+      </block>
+      <block wx:else>
+      当前选择：{{array[index]}}
+      </block>
+    </view>
+  </picker>
+  <view class="baomi">
+  小兵保证，您的信息我们将严格保密，请放心填写
+  </view>
+  <view class="getprice">
+  安全获取
+  </view>
+</view>
+</template>
+
+<script>
+  import wepy from 'wepy'
+
+  export default class Index extends wepy.page {
+    config = {
+      navigationBarTitleText: '装修报价',
+      navigationBarBackgroundColor:'#ff7f36',
+      navigationBarTextStyle:'white'
+    }
+    components = {
+      
+    }
+    data = {
+      index:'',
+      array:['套一','套二','套三','套四']
+    }
+    methods = {
+      choosehuxing(e){
+        console.log(e)
+        this.index=e.detail.value;
+      }
+    }
+
+    events = {
+      
+    }
+
+    onLoad() {
+      
+    }
+  }
+</script>
